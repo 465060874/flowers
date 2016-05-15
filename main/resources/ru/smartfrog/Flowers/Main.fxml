@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ru.smartfrog.Flowers.FlowerController">
+	<left>
+		<VBox alignment="CENTER">
+			<padding>
+				<Insets left="10" right="10" />
+			</padding>
+		</VBox>
+	</left>
+	<right>
+		<VBox alignment="CENTER" spacing="10">
+			<padding>
+				<Insets left="10" right="10" />
+			</padding>
+		</VBox>
+	</right>
+	<bottom>
+		<HBox alignment="CENTER" spacing="10">
+			<padding>
+				<Insets bottom="25" left="25" right="25" top="25" />
+			</padding>
+   <children>
+   			<Button alignment="center" onAction="#loadImage" text="Загрузить картинку" />
+   			<Button fx:id="analizeButton" alignment="center" disable="true" onAction="#analizeImage" text="Проанализировать картинку" />
+   			<Button fx:id="loadVocabularyButton" alignment="center" onAction="#loadVocabulary" text="Загрузить словарь" />
+            <Button fx:id="genVocabularyButton" onAction="#genVocabulary" text="Обучить словарь" />
+   </children>
+		</HBox>
+	</bottom>
+   <center>
+			<ImageView fx:id="originalImage" BorderPane.alignment="CENTER" />
+   </center>
+   <top>
+      <Label fx:id="resultLabel" textAlignment="CENTER" BorderPane.alignment="CENTER">
+         <font>
+            <Font size="25.0" />
+         </font></Label>
+   </top>
+</BorderPane>
